@@ -1,0 +1,53 @@
+
+<html>
+    <style>
+        .body {
+            background-color: black;
+        }
+        h1 {
+            color: cyan
+        }
+        h2 {
+            font-family: "Brush Script MT", cursive;
+            color: yellow;
+        }
+        #What {
+            font-family: courier;
+            color: orange;
+        }
+        #Why {
+            color: greenyellow;
+            font-family:courier;
+        }
+        #How {
+            font-family:courier;
+            color: aquamarine
+        }
+        #p {
+          color: red  
+        }
+        li {
+            color: red
+        }
+    </style>
+    <head>
+        <title>Prototype</title>                
+        <link rel="icon" type="image/x-icon" href="file:///C:/Users/adeep/Downloads/flash.png">
+        <h1 align="center">Just Recycle!</h1>
+        <h2>What even <em>is</em> the problem?</h2>
+    </head>
+    <body class = "body">
+        <p id = "What">Our city, Bengaluru is facing one of its greatest problems: Waste. Every day, we accumulate about 600 tons of waste. Out of this waste, less than a quarter is sent to recycling facilities. The rest is sent various landfills and dump-sites in and around of the city. This pollutes our city to a massive extent and makes it almost unlivable for many people. </p>
+        <h2>Why should we care about it?</h2>
+        <p id = "Why">At this rate that we are going with, almost all the cities in the world will be unlivable. The environment and nature in general will be polluted. In a short span of 10 years, several organisms. All these effects for our unyielding greed. We are the ones who are the cause of this problem and only wecan take responsibility and fix it</p>
+        <h2>How to solve it?</h2>
+        <p id = "How">We must take clear steps to curb our accumulation of waste. The fastest way to do this is by reducing the amount of items we inculcate in our lives. The items we have, we can actively try to not waste them. Segregation is a good idea and all over the world, millions of people practice segragtion. It involves accurately seperating wet from dry waste. On top of that we can also practice the 3 R's: Reduce, Reuse, Recycle. Recycling enables one to use an item as it is for another purpose. Reusing allows one to simply break down and reuse the material of the object. Reducing inculcates us cutting dowm on the waste we buy</p>
+        <p id = "p">The 3 R's</p>
+        <ul>
+            <li>Reduce</li>
+            <li>Reuse</li>
+            <li>Recycle</li>
+        </ul>
+        <img src = "http://cdn.shopify.com/s/files/1/1012/2362/files/Reduce_Reuse_Recycle_large.jpg?v=1502839302" height="300", width = "300">
+    </body>
+</html>
