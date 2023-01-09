@@ -1,0 +1,90 @@
+import tkinter as tk
+import customtkinter
+import webbrowser
+Proto = customtkinter.CTk()
+customtkinter.set_appearance_mode("light")  # Modes: system (default), light, dark
+customtkinter.set_default_color_theme("blue")
+Proto.geometry("600x400")
+mon_var=tk.StringVar()
+name_var=tk.StringVar()
+con_var=tk.StringVar()
+rec_var=tk.StringVar()
+emo_var =tk.StringVar()
+def learnmore():
+   webbrowser.open_new_tab("file:///C:/Users/adeep/code/python/HTML/DT%20Prototype.html")
+def awajob():
+    webbrowser.open_new_tab("file:///C:/Users/adeep/code/HTML/AwaJob.html")
+def wastejob():
+    webbrowser.open_new_tab("file:///C:/Users/adeep/code/HTML/WasteJob.html")
+def submit():
+    name = name_var.get()
+    con = con_var.get() 
+    mon = mon_var.get ()
+    rec = rec_var.get()
+    emo = emo_var.get()
+    if name == 'learn':
+        learn = customtkinter.CTkLabel(Proto, text = 'To learn more, visit "Prototype web page"')
+        sila = customtkinter.CTkButton(Proto,text = 'Visit', command = learnmore)
+        sila.grid (row = 4, column = 1)
+        learn.grid (row = 3, column=0)
+    elif name == 'contribute':
+        con = customtkinter.CTkLabel(Proto, text = 'Do you want to contribute "money" or "recyclables"? ')
+        con.grid (row = 3, column = 0)
+        con_entry = customtkinter.CTkEntry(Proto,textvariable = con_var)
+        con_entry.grid (row = 4, column = 1)
+        sub = customtkinter.CTkButton(Proto,text = 'Submit', command = submit)
+        sub.grid (row = 5, column = 1)
+    if con == 'money':
+        mon = customtkinter.CTkLabel(Proto, text = 'Default amount donatable is ten (Enter in words)')
+        mon.grid (row=6, column = 0)
+        mon_entry = customtkinter.CTkEntry(Proto,textvariable = mon_var) 
+        mon_entry.grid (row = 7, column = 1)
+        sui = customtkinter.CTkButton(Proto,text = 'Submit', command = submit)
+        sui.grid(row = 8, column = 1)
+    if mon == 'ten':
+        thankos = customtkinter.CTkLabel(Proto, text = 'Thank you! We will contact you later! Your donation is appreciated')
+        thankos.grid (row = 9, column = 0)
+    if con == 'recyclables':
+        rec = customtkinter.CTkLabel(Proto, text = 'Do you wish to recycle single items or bulk?')
+        rec.grid (row=6, column = 0)
+        rec_entry = customtkinter.CTkEntry(Proto,textvariable = rec_var) 
+        rec_entry.grid (row = 7, column = 1)
+        simp = customtkinter.CTkButton(Proto,text = 'Submit', command = submit)
+        simp.grid(row = 8, column = 1)
+    if rec == 'single':
+        yosend = customtkinter.CTkLabel(Proto, text = 'Thank you, we will come and collect it!')
+        yosend.grid (row = 9, column = 0)
+    elif rec == 'bulk':
+        weelcome = customtkinter.CTkLabel(Proto, text = 'Thank you, we will come and collect it!')
+        weelcome.grid (row = 9, column = 0)
+    elif name == 'join':
+        em = customtkinter.CTkLabel(Proto, text = 'Are you joining the awareness or the waste management team?')
+        em.grid (row = 4, column = 0)
+        emo_entry = customtkinter.CTkEntry(Proto,textvariable = emo_var)
+        emo_entry.grid (row = 5, column = 1)
+        sol = customtkinter.CTkButton(Proto,text = 'Submit', command = submit)
+        sol.grid (row = 6, column = 1)
+    if emo == 'awareness':
+        awa = customtkinter.CTkLabel(Proto, text = 'Please visit this site to know more')
+        awa.grid (row = 7, column = 0)
+        srif = customtkinter.CTkButton(Proto,text = 'Visit', command = awajob)
+        srif.grid(row=8, column = 1)
+    elif emo == 'waste management':
+        was = customtkinter.CTkLabel(Proto, text = 'Please visit this site to know more')
+        suka = customtkinter.CTkButton(Proto,text = 'Visit', command = wastejob)
+        was.grid (row = 7, column = 0)
+        suka.grid (row = 8, column = 1)
+    rec_var.set("")
+    name_var.set("")
+    con_var.set("")
+    mon_var.set("")
+    emo_var.set("")
+mes_label = customtkinter.CTkLabel(Proto, text = 'Welcome to Photon Awareness center! ')
+name_label = customtkinter.CTkLabel(Proto, text = 'Do you want to "learn", "contribute", or "join" the fight against waste? ')
+name_entry = customtkinter.CTkEntry(Proto,textvariable = name_var)  
+sub_btn=customtkinter.CTkButton(Proto,text = 'Submit', command = submit)
+mes_label.grid(row=0,column=0)
+name_label.grid(row=1,column=0)
+name_entry.grid(row=1,column=1)
+sub_btn.grid(row=2,column=1)
+Proto.mainloop()
